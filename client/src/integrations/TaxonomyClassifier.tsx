@@ -173,7 +173,7 @@ export default function TaxonomyClassifier() {
     const isSuccess = copiedId === id;
     
     // Use the full string if available, otherwise show the code/label
-    const displayValue = (id === 'copy-full-result') ? "Full String" : (value || "Wait for input...");
+    //const displayValue = (id === 'copy-full-result') ? "Full String" : (value || "Wait for input...");
     
     return (
         <div className="space-y-1">
@@ -333,7 +333,7 @@ export default function TaxonomyClassifier() {
 
                                         {availableDefects.length > 0 && (
                                             <optgroup label="All Valid Types">
-                                                {availableDefects.map(d => (
+                                                {availableDefects.map((d: string) => (
                                                     <option key={d} value={d}>{d}</option>
                                                 ))}
                                             </optgroup>
