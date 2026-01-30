@@ -18,10 +18,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@latest
+        uses: actions/checkout@v6.0.2
 
       - name: Node Setup
-        uses: actions/setup-node@latest
+        uses: actions/setup-node@v6.2.0
         with: 
           node-version: 18
 
@@ -34,7 +34,7 @@ jobs:
         run: npm run build
       
       - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@latest
+        uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
           app-name: 'SPASS-CHS-TEST'
@@ -42,4 +42,5 @@ jobs:
           package: server
 
           
+
 
