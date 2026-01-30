@@ -23,7 +23,7 @@ jobs:
       - name: Node Setup
         uses: actions/setup-node@v6.2.0
         with: 
-          node-version: 18
+          node-version: 22
 
       - name: Node Deps
         working-directory: client
@@ -42,5 +42,6 @@ jobs:
           package: server
 
           
+
 
 
